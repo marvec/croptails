@@ -6,7 +6,7 @@ extends NodeState
 
 var next_transition: String = ""
 
-func _on_input(event: InputEvent) -> void:
+func _unhandled_input(event: InputEvent) -> void:
 	player.walk_direction = GameInputEvents.get_movement_input(event)
 	
 	if GameInputEvents.is_use_tool(event):
@@ -33,9 +33,7 @@ func _on_next_transitions() -> void:
 
 func _on_enter() -> void:
 	next_transition = ""
-	player.unhandled_input.connect(_on_input)
 
 func _on_exit() -> void:
 	next_transition = ""
-	player.unhandled_input.disconnect(_on_input)
 	animated_sprite_2d.stop()

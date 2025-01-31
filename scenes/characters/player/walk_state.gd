@@ -4,7 +4,7 @@ extends NodeState
 @export var animated_sprite_2d: AnimatedSprite2D
 @export var speed: int = 50
 
-func _on_input(event: InputEvent) -> void:
+func _unhandled_input(event: InputEvent) -> void:
 	player.walk_direction = GameInputEvents.get_movement_input(event)
 
 func _on_process(_delta : float) -> void:
@@ -24,8 +24,7 @@ func _on_next_transitions() -> void:
 		transition.emit("Idle")
 
 func _on_enter() -> void:
-	player.unhandled_input.connect(_on_input)
+	pass
 
 func _on_exit() -> void:
-	player.unhandled_input.disconnect(_on_input)
 	animated_sprite_2d.stop()
