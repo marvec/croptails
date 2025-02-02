@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=4 uid="uid://1cv5llmdhxr8"]
+[gd_scene load_steps=4 format=4 uid="uid://1cv5llmdhxr8"]
 
 [ext_resource type="TileSet" uid="uid://dfqyx6iokjbes" path="res://tilesets/game_tile_set.tres" id="1_qxb0y"]
 [ext_resource type="PackedScene" uid="uid://ccbm8xuke1bkf" path="res://scenes/characters/player/player.tscn" id="2_r2mtw"]
+[ext_resource type="PackedScene" uid="uid://bq8p78f5sjpc4" path="res://scenes/ui/game_screen.tscn" id="3_e6le7"]
 
 [node name="TestSceneObjectsRocks" type="Node2D"]
 
@@ -23,3 +24,5 @@ tile_set = ExtResource("1_qxb0y")
 position = Vector2(324, 275)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="GameScreen" parent="." instance=ExtResource("3_e6le7")]

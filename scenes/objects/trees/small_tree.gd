@@ -18,10 +18,14 @@ func on_hurt(hit_damage: int) -> void:
 func on_max_damage_reached() -> void:
 	await get_tree().create_timer(0.5).timeout
 	call_deferred("add_log_scene")
-	print("max damage")
 	queue_free()
 	
 func add_log_scene() -> void:
 	var log_instance = log_scene.instantiate() as Node2D
 	log_instance.global_position = global_position + Vector2(0, 5)
+	
+	var collectable = log_instance.get_node("CollectableComponent") as CollectableComponent
+	if collectable != null:
+		collectable.should_bounce = true
+		
 	get_parent().add_child(log_instance)

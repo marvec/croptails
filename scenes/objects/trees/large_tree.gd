@@ -24,4 +24,9 @@ func on_max_damage_reached() -> void:
 func add_log_scene() -> void:
 	var log_instance = log_scene.instantiate() as Node2D
 	log_instance.global_position = global_position + Vector2(0, 7)
+	
+	var collectable = log_instance.get_node("CollectableComponent") as CollectableComponent
+	if collectable != null:
+		collectable.should_bounce = true
+	
 	get_parent().add_child(log_instance)

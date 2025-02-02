@@ -23,4 +23,9 @@ func on_max_damage_reached() -> void:
 func add_stone_scene() -> void:
 	var stone_instance = stone_scene.instantiate() as Node2D
 	stone_instance.global_position = global_position + Vector2(0, 3)
+	
+	var collectable = stone_instance.get_node("CollectableComponent") as CollectableComponent
+	if collectable != null:
+		collectable.should_bounce = true
+	
 	get_parent().add_child(stone_instance)
