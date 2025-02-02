@@ -7,8 +7,6 @@ extends NodeState
 var next_transition: String = ""
 
 func _unhandled_input(event: InputEvent) -> void:
-	player.walk_direction = GameInputEvents.get_movement_input(event)
-	
 	if GameInputEvents.is_use_tool(event):
 		match hit_component.current_tool:
 			DataTypes.Tools.AxeWood:
@@ -22,10 +20,11 @@ func _on_process(_delta : float) -> void:
 	pass
 
 func _on_physics_process(_delta : float) -> void:
+	player.walk_direction = GameInputEvents.movement_input()
 	PlayerAnimations.play_animation(player, animated_sprite_2d, "idle")
 
 func _on_next_transitions() -> void:
-	if player.walk_direction != Vector2.ZERO: #GameInputEvents.is_movement_input():
+	if player.walk_direction != Vector2.ZERO:
 		transition.emit("Walk")
 
 	if next_transition != "":

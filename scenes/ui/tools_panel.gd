@@ -32,3 +32,13 @@ func _unhandled_input(event: InputEvent) -> void:
 		tool_watering_can.release_focus()
 		tool_corn.release_focus()
 		tool_tomato.release_focus()
+		
+	if event.is_action_pressed("select_tool_axe"):
+		ToolManager.select_tool(DataTypes.Tools.AxeWood)
+		tool_axe.grab_focus()
+	elif event.is_action_pressed("seletc_tool_tilling"):
+		ToolManager.select_tool(DataTypes.Tools.TillGround)
+		tool_tilling.grab_focus()
+	elif event.is_action_pressed("select_tool_watering"):
+		ToolManager.select_tool(DataTypes.Tools.WaterCrops)
+		tool_watering_can.grab_focus()

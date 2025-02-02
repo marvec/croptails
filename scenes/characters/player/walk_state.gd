@@ -4,13 +4,11 @@ extends NodeState
 @export var animated_sprite_2d: AnimatedSprite2D
 @export var speed: int = 50
 
-func _unhandled_input(event: InputEvent) -> void:
-	player.walk_direction = GameInputEvents.get_movement_input(event)
-
 func _on_process(_delta : float) -> void:
 	pass
 
 func _on_physics_process(_delta : float) -> void:
+	player.walk_direction = GameInputEvents.movement_input()
 	if player.walk_direction != Vector2.ZERO:
 		player.player_direction = player.walk_direction
 

@@ -16,25 +16,29 @@ shader_parameter/shake_speed = 15.0
 atlas = ExtResource("1_t12yc")
 region = Rect2(0, 0, 16, 32)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_2j0m5"]
-radius = 7.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iiig0"]
+radius = 4.0
+height = 10.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vkt34"]
 size = Vector2(10, 21)
 
 [node name="SmallTree" type="Sprite2D"]
 material = SubResource("ShaderMaterial_2d1mb")
-position = Vector2(0, -9)
+position = Vector2(0, -4)
 texture = SubResource("AtlasTexture_du7ib")
+offset = Vector2(0, -5)
 script = ExtResource("2_qs8jc")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0, 6)
-shape = SubResource("CircleShape2D_2j0m5")
+position = Vector2(0, 2)
+shape = SubResource("CapsuleShape2D_iiig0")
 
 [node name="HurtComponent" parent="." instance=ExtResource("2_td285")]
+visible = false
+position = Vector2(0, -3)
 tool = 1
 
 [node name="HurtComponentCollisionShape2D" type="CollisionShape2D" parent="HurtComponent"]
