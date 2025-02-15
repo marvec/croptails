@@ -9,6 +9,4 @@ static func play_animation(player: Player, sprite: AnimatedSprite2D, prefix: Str
 		Vector2.UP:
 			sprite.play(prefix + "_back")
 		Vector2.DOWN, _:
-			sprite.play(prefix + "_front")
-
-	
+			sprite.play(prefix + "_front")	

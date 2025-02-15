@@ -31,8 +31,14 @@ atlas = ExtResource("5_mjhou")
 region = Rect2(32, 0, 16, 16)
 
 [node name="InventoryPanel" type="PanelContainer"]
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -119.5
+offset_right = 10.0
+offset_bottom = 119.5
+grow_vertical = 2
 theme = ExtResource("1_mygh2")
 theme_type_variation = &"DarkWoodPanel"
 script = ExtResource("2_2ko7x")
@@ -50,6 +56,7 @@ layout_mode = 2
 [node name="Logs" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(26, 32)
 layout_mode = 2
+mouse_filter = 1
 theme_type_variation = &"InventoryItemPanel"
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Logs"]
@@ -62,12 +69,14 @@ texture = SubResource("AtlasTexture_h31mg")
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
+mouse_filter = 1
 theme_type_variation = &"InventoryLabel"
 text = "0"
 
 [node name="Stone" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(26, 32)
 layout_mode = 2
+mouse_filter = 1
 theme_type_variation = &"InventoryItemPanel"
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Stone"]
@@ -80,12 +89,14 @@ texture = SubResource("AtlasTexture_15lkw")
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
+mouse_filter = 1
 theme_type_variation = &"InventoryLabel"
 text = "0"
 
 [node name="Corn" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(26, 32)
 layout_mode = 2
+mouse_filter = 1
 theme_type_variation = &"InventoryItemPanel"
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Corn"]
@@ -98,12 +109,14 @@ texture = SubResource("AtlasTexture_1mupd")
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
+mouse_filter = 1
 theme_type_variation = &"InventoryLabel"
 text = "0"
 
 [node name="Tomato" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(26, 32)
 layout_mode = 2
+mouse_filter = 1
 theme_type_variation = &"InventoryItemPanel"
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Tomato"]
@@ -116,12 +129,14 @@ texture = SubResource("AtlasTexture_rnq67")
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
+mouse_filter = 1
 theme_type_variation = &"InventoryLabel"
 text = "0"
 
 [node name="Egg" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(26, 32)
 layout_mode = 2
+mouse_filter = 1
 theme_type_variation = &"InventoryItemPanel"
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Egg"]
@@ -134,12 +149,14 @@ texture = SubResource("AtlasTexture_q7yno")
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
+mouse_filter = 1
 theme_type_variation = &"InventoryLabel"
 text = "0"
 
 [node name="Milk" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(26, 32)
 layout_mode = 2
+mouse_filter = 1
 theme_type_variation = &"InventoryItemPanel"
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Milk"]
@@ -152,5 +169,6 @@ texture = SubResource("AtlasTexture_uh3aj")
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
+mouse_filter = 1
 theme_type_variation = &"InventoryLabel"
 text = "0"

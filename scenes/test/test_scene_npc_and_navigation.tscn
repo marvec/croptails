@@ -44,54 +44,70 @@ tile_map_data = PackedByteArray("AAAXAAkACAADAAAAAAAWAAkACAACAAMAAAAVAAkACAACAAM
 tile_set = ExtResource("1_se4r5")
 
 [node name="Player" parent="." instance=ExtResource("2_ldxdd")]
+z_index = 0
 position = Vector2(339, 340)
 
 [node name="Chickens" type="Node2D" parent="."]
+y_sort_enabled = true
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="Chickens"]
 navigation_polygon = SubResource("NavigationPolygon_hvncm")
 
 [node name="Chicken" parent="Chickens" instance=ExtResource("3_c88jl")]
+y_sort_enabled = true
 position = Vector2(213, 178)
 
 [node name="Chicken2" parent="Chickens" instance=ExtResource("3_c88jl")]
+y_sort_enabled = true
 position = Vector2(296, 249)
 
 [node name="Chicken3" parent="Chickens" instance=ExtResource("3_c88jl")]
+y_sort_enabled = true
 position = Vector2(259, 196)
 
 [node name="Chicken4" parent="Chickens" instance=ExtResource("3_c88jl")]
+y_sort_enabled = true
 position = Vector2(206, 241)
 
 [node name="Chicken5" parent="Chickens" instance=ExtResource("3_c88jl")]
+y_sort_enabled = true
 position = Vector2(325, 207)
 
 [node name="Chicken6" parent="Chickens" instance=ExtResource("3_c88jl")]
+y_sort_enabled = true
 position = Vector2(249, 287)
 
 [node name="Chicken7" parent="Chickens" instance=ExtResource("3_c88jl")]
+y_sort_enabled = true
 position = Vector2(344, 292)
 
 [node name="Chicken8" parent="Chickens" instance=ExtResource("3_c88jl")]
+y_sort_enabled = true
 position = Vector2(397, 240)
 
 [node name="Chicken9" parent="Chickens" instance=ExtResource("3_c88jl")]
+y_sort_enabled = true
 position = Vector2(351, 180)
 
 [node name="Cows" type="Node2D" parent="."]
+y_sort_enabled = true
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="Cows" groups=["navigation_polygon_source_geometry_group"]]
 navigation_polygon = SubResource("NavigationPolygon_ndlev")
 navigation_layers = 2
 
 [node name="Cow" parent="Cows" instance=ExtResource("4_e0k04")]
+y_sort_enabled = true
 position = Vector2(455, 184)
 
 [node name="Cow2" parent="Cows" instance=ExtResource("4_e0k04")]
+y_sort_enabled = true
 position = Vector2(490, 210)
 
 [node name="Cow3" parent="Cows" instance=ExtResource("4_e0k04")]
+y_sort_enabled = true
 position = Vector2(442, 274)
 
 [node name="Cow4" parent="Cows" instance=ExtResource("4_e0k04")]
+y_sort_enabled = true
 position = Vector2(499, 284)

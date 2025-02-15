@@ -62,10 +62,11 @@ collision_layer = 64
 script = ExtResource("1_il5l1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -13)
+position = Vector2(0, -5)
 sprite_frames = SubResource("SpriteFrames_clbu5")
 animation = &"walk"
 autoplay = "idle"
+offset = Vector2(0, -8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, -7)
